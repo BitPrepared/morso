@@ -1,0 +1,386 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+### BEGIN LICENSE
+# This file is in the public domain
+### END LICENSE
+
+import sys
+import os
+import gtk
+import gobject
+
+import gettext
+from gettext import gettext as _
+gettext.textdomain('morso')
+
+# optional Launchpad integration
+# this shouldn't crash if not found as it is simply used for bug reporting
+
+# Add project root directory (enable symlink, and trunk execution).
+PROJECT_ROOT_DIRECTORY = os.path.abspath(
+	os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0]))))
+
+if (os.path.exists(os.path.join(PROJECT_ROOT_DIRECTORY, 'morso'))
+	and PROJECT_ROOT_DIRECTORY not in sys.path):
+	sys.path.insert(0, PROJECT_ROOT_DIRECTORY)
+	os.putenv('PYTHONPATH', PROJECT_ROOT_DIRECTORY) # for subprocesses
+
+from morso import (
+	AboutMorsoDialog, PreferencesMorsoDialog, CryptDialog, coder)
+from morso.helpers import get_builder
+from morso.coder import MorseMessage
+from morso.AlphaDialog import AlphaDialog
+from morso.CryptDialog import CryptDialog
+
+
+class MorsoWindow(gtk.Window):
+	__gtype_name__ = "MorsoWindow"
+	
+	# To construct a new instance of this method, the following notable 
+	# methods are called in this order:
+	# __new__(cls)
+	# __init__(self)
+	# finish_initializing(self, builder)
+	# __init__(self)
+	#
+	# For this reason, it's recommended you leave __init__ empty and put
+	# your inialization code in finish_intializing
+	
+	m1 = MorseMessage()
+	m2 = MorseMessage()
+	m3 = MorseMessage()
+	m4 = MorseMessage()
+
+	actual = m1
+
+	def __new__(cls):
+		"""Special static method that's automatically called by Python when 
+		constructing a new instance of this class.
+		
+		Returns a fully instantiated MorsoWindow object.
+		"""
+		builder = get_builder('MorsoWindow')
+		new_object = builder.get_object("morso_window")
+		new_object.finish_initializing(builder)
+		return new_object
+
+	def finish_initializing(self, builder):
+		"""Called while initializing this instance in __new__
+
+		finish_initalizing should be called after parsing the UI definition
+		and creating a MorsoWindow object with it in order to finish
+		initializing the start of the new MorsoWindow instance.
+		
+		Put your initilization code in here and leave __init__ undefined.
+		"""
+		# Get a reference to the builder and set up the signals.
+		self.builder = builder
+		self.builder.connect_signals(self)
+
+		
+		self.AboutDialog = AboutMorsoDialog
+		self.speed = 1000
+		self.counter = 0
+
+		self.textMsg = builder.get_object("entryMsg")
+		self.codedMsg = builder.get_object("entryCodec")
+		self.lblSpeed = builder.get_object("lblSpeed")
+		self.lblStatus = builder.get_object("lblStatus")
+		self.lblActual = builder.get_object("lblActual")
+		self.lblPerc = builder.get_object("lblPerc")
+
+		self.chkCodec = builder.get_object("checkCodec")
+		self.chkText = builder.get_object("checkMsg")
+		
+		self.btnMsg1 = builder.get_object("btnMsg1")
+		self.btnMsg2 = builder.get_object("btnMsg2")
+		self.btnMsg3 = builder.get_object("btnMsg3")
+		
+		self.lblMsg = builder.get_object("label1")
+		self.lblCodec = builder.get_object("label3")
+
+		self.prgBar = builder.get_object("progressbar1")
+
+	
+		self.radioFlag = builder.get_object("radioFlag")
+		self.radioLight = builder.get_object("radioLight")	
+
+		self.textMsg.set_text(self.m1.msg)
+		self.img = builder.get_object("image")
+		self.img.set_from_file("/usr/share/morso/media/blank.png")
+
+		self.lblStatus.set_text("- Fermo -")
+		self.light = False
+		self.line = False
+		
+		self.crypted = False
+
+
+		# Uncomment the following code to read in preferences at start up.
+		#dlg = PreferencesMorsoDialog.PreferencesMorsoDialog()
+		#self.preferences = dlg.get_preferences()
+
+		# Code for other initialization actions should be added here.
+
+	def about(self, widget, data=None):
+		"""Display the about box for morso."""
+		about = AboutMorsoDialog.AboutMorsoDialog()
+		response = about.run()
+		about.destroy()
+
+	def preferences(self, widget, data=None):
+		"""Display the preferences window for morso."""
+		prefs = PreferencesMorsoDialog.PreferencesMorsoDialog()
+		response = prefs.run()
+		if response == gtk.RESPONSE_OK:
+			# Make any updates based on changed preferences here.
+			pass
+		prefs.destroy()
+
+	def quit(self, widget, data=None):
+		"""Signal handler for closing the MorsoWindow."""
+		self.destroy()
+
+	def on_destroy(self, widget, data=None):
+		"""Called when the MorsoWindow is closed."""
+		# Clean up code for saving application state should be added here.
+		gtk.main_quit()
+	
+	#############################################
+
+
+	def on_btnTraduci_clicked(self, widget):
+		self.actual.setCoded(self.codedMsg.get_text())
+		self.textMsg.set_text(self.actual.msg.strip())
+
+	def on_btnMsg1_clicked(self, widget):
+		self.actual = self.m1
+		self.textMsg.set_text(self.m1.msg)
+		self.lblActual.set_text("Messaggio: 1")
+
+	def on_btnMsg2_clicked(self, widget):
+		self.actual = self.m2
+		self.textMsg.set_text(self.m2.msg)
+		self.lblActual.set_text("Messaggio: 2")
+
+	def on_btnMsg3_clicked(self, widget):
+		self.actual = self.m3
+		self.textMsg.set_text(self.m3.msg)
+		self.lblActual.set_text("Messaggio: 3")
+
+	def on_mnu_close_activate(self, widget):
+		exit()
+	
+
+	def on_mnu_crypt_activate(self, widget):
+	
+		dlg = CryptDialog()
+		result = dlg.run()
+		dlg.hide()
+		
+		if (result == gtk.RESPONSE_OK):
+			if (self.crypted == False):
+				self.crypted = True
+				self.codedMsg.set_visible(False)
+				self.textMsg.set_visible(False)
+				self.chkCodec.set_visible(False)
+				self.chkText.set_visible(False)
+				self.btnMsg1.set_visible(False)
+				self.btnMsg2.set_visible(False)
+				self.btnMsg3.set_visible(False)
+				self.lblMsg.set_text("Controlli Bloccati")
+				self.lblCodec.set_text("Controlli Bloccati")
+			else:
+				self.crypted = False
+				self.codedMsg.set_visible(True)
+				self.textMsg.set_visible(True)
+				self.chkCodec.set_visible(True)
+				self.chkText.set_visible(True)
+				self.btnMsg1.set_visible(True)
+				self.btnMsg2.set_visible(True)
+				self.btnMsg3.set_visible(True)
+				self.lblMsg.set_text("Messaggio in Chiaro")
+				self.lblCodec.set_text("Messaggio Cifrato")
+
+	def on_mnu_new_activate(self, widget):
+
+		fcd = gtk.FileChooserDialog("Scegli un file", self,
+			gtk.FILE_CHOOSER_ACTION_OPEN,
+			(gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
+			 gtk.STOCK_OPEN, gtk.RESPONSE_ACCEPT))
+
+		response = fcd.run()
+		if (response == gtk.RESPONSE_ACCEPT):
+			f = open(fcd.get_filename(), 'r')
+		fcd.destroy()
+
+		self.actual = self.m4
+		self.actual.setMessage(f.read().strip())
+		self.textMsg.set_text(self.actual.msg)
+		f.close()
+	
+	def on_btnVia_clicked(self, widget):
+		self.lblStatus.set_text("- In Riproduzione -")
+		self.play = True
+		self.mid = False
+
+		if (self.counter == 0):
+			self.codedMsg.set_text("")
+
+		gobject.timeout_add(int(self.speed), self.msgsend)
+
+	def on_btnStop_clicked(self, widget):
+	  
+		self.lblStatus.set_text("- Fermo -")
+		if (self.light):
+			self.img.set_from_file("/usr/share/morso/media/nox.png")
+		else:
+   			self.img.set_from_file("/usr/share/morso/media/blank.png")
+		self.counter = 0
+		self.lblPerc.set_text("0 %")
+		self.codedMsg.set_text(self.actual.coded)
+		self.prgBar.set_fraction(0)
+		self.play = False
+		self.mid = False
+
+	def on_btnPause_clicked(self, widget):
+	   
+		self.lblStatus.set_text("- In Pausa -")
+		self.play = False
+
+	def on_radioFlag_clicked(self, widget):
+		if (widget.get_active()):
+			self.light = False
+			self.img.set_from_file("/usr/share/morso/media/blank.png")
+		else:
+			self.light = True
+			self.img.set_from_file("/usr/share/morso/media/nox.png")
+	
+	def on_radioLight_clicked(self, widget):
+		if (widget.get_active()):
+			self.light = True
+			self.img.set_from_file("/usr/share/morso/media/nox.png")
+		else:
+			self.light = False
+			self.img.set_from_file("/usr/share/morso/media/blank.png")
+
+	def flagsend(self):
+	
+		if (self.mid == False):
+			self.mid = True
+			if (self.actual.coded[self.counter] == '/'):
+				self.img.set_from_file("/usr/share/morso/media/wrdend.png")
+				self.counter += 1
+			else:
+				self.img.set_from_file("/usr/share/morso/media/mid.png")
+		else:	
+			
+			self.mid = False
+			if (self.actual.coded[self.counter] == '.'):
+				self.img.set_from_file("/usr/share/morso/media/point.png")
+			if (self.actual.coded[self.counter] == '-'):
+				self.img.set_from_file("/usr/share/morso/media/line.png")
+			self.counter += 1
+
+
+	def lightsend(self):
+	
+		if (self.line == True):
+			self.line = False
+			return True
+	
+		if (self.play and int(self.counter) < int(self.actual.lencoded())):
+			if (self.mid == False):
+				self.mid = True
+				self.img.set_from_file("/usr/share/morso/media/nox.png")
+			else:
+				self.mid = False
+				if (self.actual.coded[self.counter] == '.'):
+					self.img.set_from_file("/usr/share/morso/media/lux.png")
+				if (self.actual.coded[self.counter] == '/'):
+					self.img.set_from_file("/usr/share/morso/media/nox.png")
+				if (self.actual.coded[self.counter] == '-'):
+					self.line = True
+					self.img.set_from_file("/usr/share/morso/media/lux.png")
+				self.counter += 1
+
+		return False				 
+
+	def msgsend(self):
+
+		if (self.play and int(self.counter) < int(self.actual.lencoded())):
+		
+			if (self.light):
+				ret = self.lightsend()
+				if (ret == True):
+					return ret
+			else:
+				self.flagsend()
+
+				
+			self.codedMsg.set_text(self.actual.coded[:self.counter])
+			self.prgBar.set_fraction(round(float(self.counter)/float(self.actual.lencoded()),2))
+			self.lblPerc.set_text(str(round(float(self.counter)/float(self.actual.lencoded())*100,2)) + " %")
+		
+
+		else:
+			if (self.play == True):	 
+				self.play = False
+				self.counter = 0
+				self.lblPerc.set_text("0 %")
+				self.prgBar.set_fraction(0)
+				self.lblStatus.set_text("- Fermo -")
+				self.codedMsg.set_text(self.actual.coded)	
+				self.mid = False
+				
+				if (self.light):
+					self.img.set_from_file("/usr/share/morso/media/nox.png")			
+				else:
+					self.img.set_from_file("/usr/share/morso/media/blank.png")			
+
+		return self.play
+
+	def on_btnAlfabeto_clicked(self, widget):
+		a = AlphaDialog()
+		a.show()
+
+	def on_scaleSpeed_value_changed(self, widget):
+		self.lblSpeed.set_text(str(widget.get_value()))
+		self.speed = widget.get_value()
+
+	def on_checkCodec_toggled(self, widget):	
+		if (widget.get_active()):
+			self.codedMsg.set_visible(True)
+		else:
+			self.codedMsg.set_visible(False)
+
+	def on_checkMsg_toggled(self, widget):	
+		if (widget.get_active()):
+			self.textMsg.set_visible(True)
+		else:
+			self.textMsg.set_visible(False)
+
+	def on_entryMsg_changed(self, widget):
+		self.actual.setMessage(widget.get_text())
+		if (not(self.codedMsg.get_text().strip() == self.actual.coded.strip())):
+			self.codedMsg.set_text(self.actual.coded.strip())
+
+if __name__ == "__main__":
+	# Support for command line options.
+	import logging
+	import optparse
+	parser = optparse.OptionParser(version="%prog %ver")
+	parser.add_option(
+		"-v", "--verbose", action="store_true", dest="verbose",
+		help=_("Show debug messages"))
+	(options, args) = parser.parse_args()
+
+	# Set the logging level to show debug messages.
+	if options.verbose:
+		logging.basicConfig(level=logging.DEBUG)
+		logging.debug('logging enabled')
+
+	# Run the application.
+	window = MorsoWindow()
+	window.show()
+	gtk.main()

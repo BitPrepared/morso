@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Morse
+_Comment=Morse application
+Categories=GNOME;Utility;
+Exec=morse
+Icon=morse
+Terminal=false
+Type=Application

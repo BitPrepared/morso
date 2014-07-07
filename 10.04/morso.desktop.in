@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=MorsO
+Comment=Morso application
+Categories=GNOME;Utility;
+Exec=morso
+Icon=/usr/share/morso/media/icon.png
+Terminal=false
+Type=Application

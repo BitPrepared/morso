@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-29 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/ui/CryptDialog.ui.h:1
+msgid "Blocco/sblocco controlli"
+msgstr ""
+
+#: ../data/ui/CryptDialog.ui.h:2
+msgid "Inserisci la password per bloccare/sbloccare i controlli di MorsO"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:1
+msgid " "
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:2
+msgid "- In Pausa -"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:3
+msgid "0"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:4
+msgid "1000"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:5
+msgid "<b>Canale</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:6
+msgid "<b>Controlli</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:7
+msgid "<b>Messaggio</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:8
+msgid "<b>Status</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:9
+msgid "<b>Varie</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:10
+msgid "<b>Visualizzazione</b>"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:11
+msgid "Alfabeto"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:12
+msgid "Attività in corso:"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:13
+msgid "Bandiera"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:14
+msgid "Luce"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:15
+msgid "Messaggio 1"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:16
+msgid "Messaggio 2"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:17
+msgid "Messaggio 3"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:18
+msgid "Messaggio Cifrato"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:19
+msgid "Messaggio in Chiaro"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:20
+msgid "Messaggio: 1"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:21
+msgid "Morso"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:22
+msgid "Mostra il messaggio"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:23
+msgid "Pausa"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:24
+msgid "Percentuale Messaggio:"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:25
+msgid "Stop"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:26
+msgid "Traduci"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:27
+msgid "Velocità di trasmissione"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:28
+msgid "Velocità di trasmissione:"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:29
+msgid "Via"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:30
+msgid "_File"
+msgstr ""
+
+#: ../data/ui/MorsoWindow.ui.h:31
+msgid "jhgjhgjhg"
+msgstr ""
+
+#: ../bin/morso.py:375
+msgid "Show debug messages"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:1
+msgid "                 Alfabeto                 "
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:2
+msgid "-"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:3
+msgid "- -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:4
+msgid "- - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:5
+msgid "- - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:6
+msgid "- - . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:7
+msgid "- - . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:8
+msgid "- ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:9
+msgid "- . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:10
+msgid "- . - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:11
+msgid "- . - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:12
+msgid "- . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:13
+msgid "- . . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:14
+msgid "- . . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:15
+msgid "."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:16
+msgid ". -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:17
+msgid ". - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:18
+msgid ". - - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:19
+msgid ". - - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:20
+msgid ". - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:21
+msgid ". - . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:22
+msgid ". ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:23
+msgid ". . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:24
+msgid ". . - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:25
+msgid ". . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:26
+msgid ". . . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:27
+msgid ". . . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:28
+msgid "A"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:29
+msgid "B"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:30
+msgid "C"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:31
+msgid "D"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:32
+msgid "E"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:33
+msgid "F"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:34
+msgid "G"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:35
+msgid "H"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:36
+msgid "I"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:37
+msgid "J"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:38
+msgid "K"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:39
+msgid "L"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:40
+msgid "M"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:41
+msgid "N"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:42
+msgid "O"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:43
+msgid "P"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:44
+msgid "Q"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:45
+msgid "R"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:46
+msgid "S"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:47
+msgid "T"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:48
+msgid "U"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:49
+msgid "V"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:50
+msgid "W"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:51
+msgid "X"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:52
+msgid "Y"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:53
+msgid "Z"
+msgstr ""

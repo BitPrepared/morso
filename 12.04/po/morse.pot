@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-08 01:08+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/ui/MorseWindow.ui.h:1
+msgid "jhgjhgjhg"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:2 ../morse.desktop.in.h:1
+msgid "Morse"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:3
+msgid "_File"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:4
+msgid "Via"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:5
+msgid "Stop"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:6
+msgid "Pausa"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:7
+msgid "Messaggio: 1"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:8
+msgid "<b>Visualizzazione</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:9
+msgid "Attività in corso:"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:10
+msgid "Velocità di trasmissione:"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:11
+msgid "Percentuale Messaggio:"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:12
+msgid "- In Pausa -"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:13
+msgid "1000"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:14
+msgid "0"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:15
+msgid "<b>Status</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:16
+msgid "Velocità di trasmissione"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:17
+msgid "<b>Controlli</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:18
+msgid "Fischietto"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:19
+msgid "Bandiera"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:20
+msgid "Luce"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:21
+msgid "<b>Canale</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:22
+msgid "Messaggio 1"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:23
+msgid "Messaggio 2"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:24
+msgid "Messaggio 3"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:25
+msgid "<b>Messaggio</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:26
+msgid "Alfabeto"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:27
+msgid "Traduci"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:28
+msgid "<b>Varie</b>"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:29
+msgid "Messaggio Cifrato"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:30
+msgid "Mostra il messaggio"
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:31
+msgid " "
+msgstr ""
+
+#: ../data/ui/MorseWindow.ui.h:32
+msgid "Messaggio in Chiaro"
+msgstr ""
+
+#: ../data/ui/TestDialog.ui.h:1
+msgid "label"
+msgstr ""
+
+#. coder = MorseMessage()
+#. coder.setMessage(mymsg)
+#. print coder.msg
+#. print coder.coded
+#. coder.setCoded(mycoded)
+#. print coder.msg
+#. print coder.coded
+#. print "\a"
+#: ../data/ui/AlphaDialog.ui.h:1 ../data/ui/AlphabetdialogDialog.ui.h:1
+msgid "                 Alfabeto                 "
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:2 ../data/ui/AlphabetdialogDialog.ui.h:2
+msgid "A"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:3 ../data/ui/AlphabetdialogDialog.ui.h:3
+msgid "B"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:4 ../data/ui/AlphabetdialogDialog.ui.h:4
+msgid "C"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:5 ../data/ui/AlphabetdialogDialog.ui.h:5
+msgid "D"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:6 ../data/ui/AlphabetdialogDialog.ui.h:6
+msgid "E"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:7 ../data/ui/AlphabetdialogDialog.ui.h:7
+msgid "F"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:8 ../data/ui/AlphabetdialogDialog.ui.h:8
+msgid "G"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:9 ../data/ui/AlphabetdialogDialog.ui.h:9
+msgid "H"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:10 ../data/ui/AlphabetdialogDialog.ui.h:10
+msgid "J"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:11 ../data/ui/AlphabetdialogDialog.ui.h:11
+msgid "I"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:12 ../data/ui/AlphabetdialogDialog.ui.h:12
+msgid "K"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:13 ../data/ui/AlphabetdialogDialog.ui.h:13
+msgid "L"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:14 ../data/ui/AlphabetdialogDialog.ui.h:14
+msgid "M"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:15 ../data/ui/AlphabetdialogDialog.ui.h:15
+msgid "N"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:16 ../data/ui/AlphabetdialogDialog.ui.h:16
+msgid "O"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:17 ../data/ui/AlphabetdialogDialog.ui.h:17
+msgid "Q"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:18 ../data/ui/AlphabetdialogDialog.ui.h:18
+msgid "P"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:19 ../data/ui/AlphabetdialogDialog.ui.h:19
+msgid "R"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:20 ../data/ui/AlphabetdialogDialog.ui.h:20
+msgid "S"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:21 ../data/ui/AlphabetdialogDialog.ui.h:21
+msgid "U"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:22 ../data/ui/AlphabetdialogDialog.ui.h:22
+msgid "T"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:23 ../data/ui/AlphabetdialogDialog.ui.h:23
+msgid "V"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:24 ../data/ui/AlphabetdialogDialog.ui.h:24
+msgid "X"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:25 ../data/ui/AlphabetdialogDialog.ui.h:25
+msgid "W"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:26 ../data/ui/AlphabetdialogDialog.ui.h:26
+msgid "Y"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:27 ../data/ui/AlphabetdialogDialog.ui.h:27
+msgid "Z"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:28 ../data/ui/AlphabetdialogDialog.ui.h:28
+msgid ". -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:29 ../data/ui/AlphabetdialogDialog.ui.h:29
+msgid "- . . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:30 ../data/ui/AlphabetdialogDialog.ui.h:30
+msgid "- . - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:31 ../data/ui/AlphabetdialogDialog.ui.h:31
+msgid "- . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:32 ../data/ui/AlphabetdialogDialog.ui.h:32
+msgid "."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:33 ../data/ui/AlphabetdialogDialog.ui.h:33
+msgid ". . - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:34 ../data/ui/AlphabetdialogDialog.ui.h:34
+msgid "- - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:35 ../data/ui/AlphabetdialogDialog.ui.h:35
+msgid ". . . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:36 ../data/ui/AlphabetdialogDialog.ui.h:36
+msgid ". ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:37 ../data/ui/AlphabetdialogDialog.ui.h:37
+msgid ". - - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:38 ../data/ui/AlphabetdialogDialog.ui.h:38
+msgid "- . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:39 ../data/ui/AlphabetdialogDialog.ui.h:39
+msgid ". - . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:40 ../data/ui/AlphabetdialogDialog.ui.h:40
+msgid "- -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:41 ../data/ui/AlphabetdialogDialog.ui.h:41
+msgid "- ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:42 ../data/ui/AlphabetdialogDialog.ui.h:42
+msgid "- - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:43 ../data/ui/AlphabetdialogDialog.ui.h:43
+msgid ". - - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:44 ../data/ui/AlphabetdialogDialog.ui.h:44
+msgid "- - . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:45 ../data/ui/AlphabetdialogDialog.ui.h:45
+msgid ". - ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:46 ../data/ui/AlphabetdialogDialog.ui.h:46
+msgid ". . ."
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:47 ../data/ui/AlphabetdialogDialog.ui.h:47
+msgid "-"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:48 ../data/ui/AlphabetdialogDialog.ui.h:48
+msgid ". . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:49 ../data/ui/AlphabetdialogDialog.ui.h:49
+msgid ". . . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:50 ../data/ui/AlphabetdialogDialog.ui.h:50
+msgid ". - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:51 ../data/ui/AlphabetdialogDialog.ui.h:51
+msgid "- . . -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:52 ../data/ui/AlphabetdialogDialog.ui.h:52
+msgid "- . - -"
+msgstr ""
+
+#: ../data/ui/AlphaDialog.ui.h:53 ../data/ui/AlphabetdialogDialog.ui.h:53
+msgid "- - . ."
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:54
+msgid "AAAA"
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:55
+msgid "BBBB"
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:56
+msgid "CCC"
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:57
+msgid "DDDD"
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:58
+msgid "EEEE"
+msgstr ""
+
+#: ../data/ui/AlphabetdialogDialog.ui.h:59
+msgid "FFFF"
+msgstr ""
+
+#: ../morse/__init__.py:32
+msgid "Show debug messages (-vv debugs morse_lib also)"
+msgstr ""
+
+#: ../data/ui/AboutMorseDialog.ui.h:1
+msgid ""
+"# Copyright (C) 2013 Nicola Corti corti.nico@gmail.com\n"
+"# This program is free software: you can redistribute it and/or modify it \n"
+"# under the terms of the GNU General Public License version 3, as "
+"published \n"
+"# by the Free Software Foundation.\n"
+"# \n"
+"# This program is distributed in the hope that it will be useful, but \n"
+"# WITHOUT ANY WARRANTY; without even the implied warranties of \n"
+"# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR \n"
+"# PURPOSE.  See the GNU General Public License for more details.\n"
+"# \n"
+"# You should have received a copy of the GNU General Public License along \n"
+"# with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+
+#: ../data/ui/AboutMorseDialog.ui.h:14
+msgid "Copyright (C) 2013 Nicola Corti corti.nico@gmail.com"
+msgstr ""
+
+#: ../morse.desktop.in.h:2
+msgid "Morse application"
+msgstr ""

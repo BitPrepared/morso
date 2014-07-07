@@ -1,0 +1,9 @@
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
+Upstream-Name: morso
+Upstream-Maintainer: Nicola Corti <corti.nico@gmail.com>
+Upstream-Source: UNKNOWN
+
+Files: *
+Copyright: (C) 2013
+Copyright: (C) 2013 Nicola Corti <corti.nico@gmail.com>
+License: GNU General Public Licence v.3

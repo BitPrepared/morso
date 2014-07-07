@@ -1,0 +1,3 @@
+project = morso
+version = 0.4.3
+template = ubuntu-application
